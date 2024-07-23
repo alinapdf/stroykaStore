@@ -1,0 +1,23 @@
+.swiper {
+  width: 100px;
+  background-color: red;
+}
+
+.mySwiper {
+  width: 1160px;
+  overflow: unset;
+}
+
+.customPrevButton,
+.customNextButton {
+  position: unset;
+}
+
+// commentselement
+
+.swiperItem {
+  background-color: rgb(225, 225, 225);
+  width: 376px;
+  height: 376px;
+  padding: 24px;
+}

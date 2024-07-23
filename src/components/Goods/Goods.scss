@@ -1,0 +1,57 @@
+.goods {
+  margin-bottom: 80px;
+  &-header {
+    font-family: "Manrope-SemiBold";
+    font-size: 34px;
+    color: #2f323a;
+    margin-bottom: 20px;
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      width: 278px;
+      margin-right: 16px;
+      transition: all 0.5s ease;
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+      margin-bottom: 16px;
+      &-img {
+        margin-bottom: 16px;
+      }
+      &-name {
+        padding-left: 5px;
+        height: 72px;
+        width: 246px;
+        color: #2f323a;
+        margin-bottom: 12px;
+      }
+      &-price {
+        padding-left: 5px;
+        font-family: "Manrope-Bold";
+        font-size: 20px;
+        color: #171b24;
+        margin-bottom: 16px;
+      }
+      &-btn {
+        font-size: 18px;
+        color: #171b24;
+        background-color: #fcec41;
+        padding: 12px 80px;
+        transition: all 0.2s ease;
+        text-align: center;
+        width: 100%;
+        &:hover {
+          background-color: #2f323a;
+          color: #fff;
+        }
+      }
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transform: translateY(-15px);
+      }
+    }
+  }
+}

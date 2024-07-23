@@ -1,0 +1,23 @@
+.about {
+  margin: 40px 0;
+  &-container {
+    width: 1360px;
+    margin: 0 auto;
+    padding: 88px 0;
+    background-image: url("./../../img/about/about-bg.jpg");
+    background-repeat: no-repeat;
+  }
+  &-text-wrapper {
+    width: 670px;
+    margin-left: 198px;
+    .about-header {
+      font-family: "Manrope-SemiBold";
+      font-size: 32px;
+      color: #2f323a;
+      margin-bottom: 20px;
+    }
+    .about-text {
+      line-height: 150%;
+    }
+  }
+}

@@ -3,6 +3,7 @@
   height: 420px;
   margin-top: 40px;
   position: relative;
+  margin-bottom: 80px;
 }
 
 .swiper-contain-img {
@@ -49,9 +50,13 @@
   border: 1px solid #d1d1d3;
   width: 52px;
   height: 52px;
+  transition: all 0.2s ease;
   &::after {
     content: "";
     font-size: 0;
+  }
+  &:hover {
+    background-color: #2f323a;
   }
 }
 
@@ -69,6 +74,9 @@
     width: 24px;
     height: 24px;
   }
+  &:hover::after {
+    background-image: url("./../../img/slider/btn-prev-white.svg");
+  }
   margin-right: 12px;
 }
 
@@ -85,5 +93,8 @@
     background-repeat: no-repeat;
     width: 24px;
     height: 24px;
+  }
+  &:hover::after {
+    background-image: url("./../../img/slider/btn-next-white.svg");
   }
 }
