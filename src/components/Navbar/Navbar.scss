@@ -1,6 +1,13 @@
 @import "./../../common.scss";
 .nav {
   padding: 16px 0;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  top: 0;
+  z-index: 999;
+  left: 50%;
+  transform: translateX(-50%);
   &-wrapper {
     display: flex;
     justify-content: space-between;
