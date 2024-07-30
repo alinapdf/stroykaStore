@@ -1,0 +1,125 @@
+.good-info {
+  margin-top: 120px;
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #e8e8ea;
+    margin-bottom: 40px;
+    &-img {
+      width: 572px;
+      height: 428px;
+      //   display: flex;
+      //   flex-direction: column;
+      //   justify-content: center;
+      //   align-items: center;
+      & img {
+        width: 100%;
+        height: 100%;
+        border-right: 1px solid #e8e8ea;
+      }
+    }
+    &-text {
+      width: 588px;
+      padding: 24px;
+      &-header {
+        font-family: "Manrope-SemiBold";
+        font-size: 34px;
+        margin-bottom: 12px;
+      }
+      &-status {
+        font-size: 15px;
+        color: #3baa35;
+        margin-bottom: 12px;
+        padding-left: 21px;
+        background-image: url("./../../img/goods-page/check-circle.svg");
+        background-repeat: no-repeat;
+      }
+      &-price {
+        font-family: "Manrope-SemiBold";
+        font-size: 24px;
+        color: #171b24;
+        margin-bottom: 24px;
+      }
+    }
+    &-basket-wrapper {
+      display: flex;
+      margin-bottom: 35px;
+      &-btn {
+        font-size: 18px;
+        color: #171b24;
+        padding: 12px 80px;
+        background-color: #fcec41;
+        margin-right: 12px;
+      }
+      &-counter {
+        display: flex;
+        align-items: center;
+        &-plus,
+        &-minus {
+          width: 48px;
+          height: 48px;
+          border: 1px solid #d1d1d3;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        &-input {
+          width: 48px;
+          height: 48px;
+          text-align: center;
+          font-size: 18px;
+          border-top: 1px solid #d1d1d3;
+          border-bottom: 1px solid #d1d1d3;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+    &-text-delivery-info {
+      &-deliver {
+        color: #454950;
+        margin-bottom: 12px;
+      }
+      &-information {
+        width: 504px;
+        padding-left: 36px;
+        background-image: url("./../../img/goods-page/truck-icon.svg");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.desc-container {
+  margin-bottom: 80px;
+  padding: 60px 196px;
+  border: 1px solid #e8e8ea;
+}
+.desc-header {
+  font-family: "Manrope-SemiBold";
+  font-size: 34px;
+  color: #171b24;
+  margin-bottom: 20px;
+}
+
+.desc-section {
+  margin-bottom: 16px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &-header {
+    text-transform: uppercase;
+    font-family: "Manrope-SemiBold";
+    margin-bottom: 8px;
+  }
+}
+
+.good-info-back-to-home {
+  display: block;
+  padding-bottom: 12px;
+  transition: all 0.5s ease;
+  &:hover {
+    text-decoration: underline;
+  }
+}

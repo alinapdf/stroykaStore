@@ -1,0 +1,60 @@
+.container-window {
+  width: 100%;
+  overflow: hidden;
+}
+.comments-top-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-header {
+    font-family: "Manrope-SemiBold";
+    font-size: 34px;
+    color: #2f323a;
+    margin-bottom: 20px;
+  }
+
+  &-navigation {
+    display: flex;
+  }
+}
+
+.window-container {
+  overflow: hidden;
+}
+
+//commentsElement
+
+.comments-list-element-top-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  &-user {
+    display: flex;
+    align-items: center;
+    &-avatar {
+      margin-right: 14px;
+    }
+    &-name {
+      font-family: "Manrope-Bold";
+      font-size: 18px;
+      color: #2f323a;
+    }
+  }
+}
+
+.comments-list-element-info {
+  &-text {
+    width: 328px;
+    line-height: 150%;
+    color: #2f323a;
+    margin-bottom: 15px;
+    height: 216px;
+    overflow: hidden;
+  }
+  &-date {
+    font-size: 15px;
+    color: #8b8d92;
+  }
+}

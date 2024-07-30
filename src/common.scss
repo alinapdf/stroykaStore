@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("./fonts/Inter-Regular.ttf") format(truetype);
+}
+@font-face {
+  font-family: "Manrope-Regular";
+  src: url("./fonts/Manrope-Regular.ttf") format(truetype);
+}
+@font-face {
+  font-family: "Manrope-Bold";
+  src: url("./fonts/Manrope-Bold.ttf") format(truetype);
+}
+@font-face {
+  font-family: "Manrope-Medium";
+  src: url("./fonts/Manrope-Medium.ttf") format(truetype);
+}
+@font-face {
+  font-family: "Manrope-SemiBold";
+  src: url("./fonts/Manrope-SemiBold.ttf") format(truetype);
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("./fonts/Roboto-Regular.ttf") format(truetype);
+}
+body {
+  font-family: "Manrope-Medium";
+}
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}

@@ -1,0 +1,143 @@
+.basket {
+  margin-top: 120px;
+  margin-bottom: 80px;
+  &-header-wrapper {
+    display: flex;
+    width: 1360px;
+    margin: 0 auto;
+    background-image: url("./../../img/basket-page/basket-bg-header.jpg");
+    background-repeat: no-repeat;
+    padding: 84px 100px;
+    margin-bottom: 40px;
+    padding-left: 110px;
+    .basket-header {
+      font-family: "Manrope-Bold";
+      font-size: 48px;
+      color: #171b24;
+    }
+  }
+  &-wrapper {
+    display: flex;
+    // justify-content: space-between;
+    &-result {
+      width: 278px;
+      padding: 16px;
+      border: 1px solid #e8e9ea;
+      margin-bottom: 4px;
+      margin-right: 16px;
+      &-header {
+        font-family: "Manrope-Bold";
+        font-size: 18px;
+        color: #171b24;
+        margin-bottom: 12px;
+      }
+      &-info-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        color: #333333;
+      }
+      &-btn {
+        font-size: 18px;
+        color: #171b24;
+        padding: 12px 52px;
+        background-color: #fcec41;
+        margin-bottom: 32px;
+        transition: all 0.5s ease;
+        &:hover {
+          background-color: #171b24;
+          color: white;
+        }
+      }
+      &-info {
+        &-text {
+          padding-left: 34px;
+          font-size: 15px;
+          color: #454950;
+          margin-bottom: 16px;
+          &.one-deliver {
+            background-image: url("./../../img/basket-page/info-icon.svg");
+            background-repeat: no-repeat;
+          }
+          &.delivery {
+            background-image: url("./../../img/basket-page/delivery-icon.svg");
+            background-repeat: no-repeat;
+          }
+          &.box {
+            background-image: url("./../../img/basket-page/box-icon.svg");
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+
+.basket-contain-list-item {
+  width: 866px;
+  border: 1px solid #e8e9ea;
+  margin-bottom: 16px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &-wrapper {
+    display: flex;
+
+    &-info {
+      padding: 16px;
+      &-header {
+        color: #2f323a;
+        margin-bottom: 12px;
+        height: 72px;
+      }
+      &-price {
+        color: #171b24;
+        font-family: "Manrope-Bold";
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+      &-delete {
+        font-size: 18px;
+        color: #171b24;
+        padding: 12px 50px;
+        border: 1px solid #d1d1d3;
+      }
+    }
+  }
+}
+
+.basket-contain-list-item-wrapper-bottom-part-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  .basket-contain-list-item-wrapper-info-counter {
+    border: 1px solid #d1d1d3;
+    margin-right: 35px;
+    &-plus,
+    &-minus {
+      width: 48px;
+      height: 48px;
+      //   border: 1px solid #d1d1d3;
+    }
+    &-plus {
+      border-right: 1px solid #d1d1d3;
+    }
+    &-minus {
+      border-left: 1px solid #d1d1d3;
+    }
+    &-input {
+      width: 166px;
+      height: 48px;
+      text-align: center;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.no-goods-in-busket {
+  font-size: 24px;
+  text-align: center;
+}

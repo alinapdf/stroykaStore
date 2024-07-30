@@ -1,0 +1,2 @@
+const productInBasketList = [];
+export { productInBasketList };

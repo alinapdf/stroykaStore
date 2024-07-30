@@ -1,0 +1,15 @@
+.button-to-home {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 8px;
+  right: 0;
+  transition: all 0.5s ease;
+  &:hover {
+    right: 12px;
+    background-color: #dedede;
+  }
+}

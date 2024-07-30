@@ -1,0 +1,63 @@
+.categories {
+  margin-bottom: 66px;
+  &-top-part-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    &-header {
+      font-family: "Manrope-SemiBold";
+      font-size: 34px;
+      color: #2f323a;
+    }
+    &-link {
+      font-size: 18px;
+      color: #171b24;
+      padding: 12px 48px 12px 24px;
+      border: 1px solid #d1d1d3;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("./../../img/categories/cat-arrow.svg");
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        right: 12px;
+        top: 14px;
+        display: inline-block;
+        transition: all 0.5s ease;
+      }
+      &:hover::before {
+        right: 0px;
+      }
+    }
+  }
+  &-bottom-part-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+      width: 180px;
+      height: 180px;
+      margin-right: 16px;
+      transition: all 0.2s ease;
+      margin-bottom: 16px;
+      &:nth-child(6n) {
+        margin-right: 0;
+      }
+      &:hover {
+        background-color: #fcec41;
+      }
+      &-name {
+        text-align: center;
+        font-size: 18px;
+        color: #2f323a;
+        margin: 12px 0 24px;
+      }
+    }
+  }
+}
+
+.categories-bottom-part-wrapper-item {
+  border: 1px solid #d1d1d3;
+}
