@@ -35,6 +35,8 @@
     padding: 12px 24px;
     background-color: #fcec41;
     transition: all 0.5s ease;
+    position: fixed;
+    bottom: 40px;
     &:hover {
       color: #d1d1d3;
       background-color: #171b24;

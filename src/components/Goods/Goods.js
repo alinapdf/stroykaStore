@@ -8,7 +8,7 @@ const Goods = () => {
         <div className="container">
           <h2 className="goods-header">Все товары</h2>
           <ul className="goods-list">
-            {goodsList.map((good) => {
+            {goodsList.map((good, index) => {
               return (
                 <GoodItem
                   id={good.id}
@@ -16,6 +16,7 @@ const Goods = () => {
                   name={good.name}
                   price={good.price}
                   key={good.id}
+                  index={index}
                 />
               );
             })}

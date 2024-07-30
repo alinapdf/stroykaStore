@@ -1,5 +1,6 @@
 import "./Categories.scss";
 import { categoriesList } from "./categoriesList";
+import { Link } from "react-router-dom";
 const Categories = () => {
   return (
     <>
@@ -9,9 +10,9 @@ const Categories = () => {
             <h2 className="categories-top-part-wrapper-header">
               Популярные категории
             </h2>
-            <a href="#" className="categories-top-part-wrapper-link">
+            <Link to="/categories" className="categories-top-part-wrapper-link">
               Все категории
-            </a>
+            </Link>
           </div>
           <ul className="categories-bottom-part-wrapper">
             {categoriesList.map((category) => {

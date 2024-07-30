@@ -1,15 +1,27 @@
-const GoodItem = (good) => {
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import ButtonAddToBusket from "../Buttons/ButtonAddToBasket";
+import ButtonCounterInBasket from "../Buttons/ButtonCounterInBasket";
+const GoodItem = ({ id, img, name, price }) => {
+  const [goodButton, setGoodButton] = useState(true);
+  const changeGoodBtn = () => {
+    setGoodButton(false);
+  };
   return (
     <>
       <li className="goods-list-item">
-        <a href="#" className="goods-list-item-link">
+        <Link to={`/goods-info-page/${id}`} className="goods-list-item-link">
           <div className="goods-list-item-img">
-            <img src={good.img} alt={good.name} />
+            <img src={img} alt={name} />
           </div>
-          <div className="goods-list-item-name">{good.name}</div>
-          <div className="goods-list-item-price">{good.price}</div>
-          <button className="goods-list-item-btn">В корзину</button>
-        </a>
+          <div className="goods-list-item-name">{name}</div>
+          <div className="goods-list-item-price">{price}</div>
+        </Link>
+        {goodButton ? (
+          <ButtonAddToBusket onClick={changeGoodBtn} />
+        ) : (
+          <ButtonCounterInBasket />
+        )}
       </li>
     </>
   );

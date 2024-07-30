@@ -12,7 +12,7 @@ import g11 from "./../../img/goods/g11.png";
 import g12 from "./../../img/goods/g12.png";
 const goodsList = [
   {
-    id: 1,
+    id: 0,
     name: "Керамогранит Yasmin 598х185 коричневый C-YA4M112D",
     price: "899 ₽",
     desc: [
@@ -50,7 +50,7 @@ const goodsList = [
     img: g1,
   },
   {
-    id: 2,
+    id: 1,
     name: "Затирка для узких швов Ceresit СЕ 33, цвет белый, 2 кг",
     price: "275 ₽",
     desc: [
@@ -88,7 +88,7 @@ const goodsList = [
     img: g2,
   },
   {
-    id: 3,
+    id: 2,
     name: "Грунтовка Старатели 10л глубокого проникновения",
     price: "839 ₽",
     desc: [
@@ -126,7 +126,7 @@ const goodsList = [
     img: g3,
   },
   {
-    id: 4,
+    id: 3,
     name: "Гипсокартон Волма, 2500 х 1200 х 12,5 мм",
     price: "335 ₽",
     desc: [
@@ -164,7 +164,7 @@ const goodsList = [
     img: g4,
   },
   {
-    id: 5,
+    id: 4,
     name: "Профиль 0,55мм для гипсокартона",
     price: "195 ₽",
     desc: [
@@ -201,7 +201,7 @@ const goodsList = [
     img: g5,
   },
   {
-    id: 6,
+    id: 5,
     name: "Рулетка 3м",
     price: "100 ₽",
     desc: [
@@ -239,7 +239,7 @@ const goodsList = [
     img: g6,
   },
   {
-    id: 7,
+    id: 6,
     name: "Кнауф Мп 75 штукатурка гипсовая МН 30кг",
     price: "380 ₽",
     desc: [
@@ -278,7 +278,7 @@ const goodsList = [
     img: g7,
   },
   {
-    id: 8,
+    id: 7,
     name: "Уголок серый канализационный Д110 ГР90",
     price: "335 ₽",
     desc: [
@@ -316,7 +316,7 @@ const goodsList = [
     img: g8,
   },
   {
-    id: 9,
+    id: 8,
     name: "Knauf Ротбанд, 30 кг",
     price: "508 ₽",
     desc: [
@@ -352,7 +352,7 @@ const goodsList = [
     img: g9,
   },
   {
-    id: 10,
+    id: 9,
     name: "Саморез по металлу 3,5х25 мм для гипсокартона",
     price: "340 ₽",
     desc: [
@@ -390,7 +390,7 @@ const goodsList = [
     img: g10,
   },
   {
-    id: 11,
+    id: 10,
     name: "Шпатлевка универсальная Danogips SuperFinish 17 л",
     price: "2 555 ₽",
     desc: [
@@ -430,7 +430,7 @@ const goodsList = [
     img: g11,
   },
   {
-    id: 12,
+    id: 11,
     name: "Клейкая лента металлизированная Изоспан FL 5х5000 см",
     price: "226 ₽",
     desc: [
