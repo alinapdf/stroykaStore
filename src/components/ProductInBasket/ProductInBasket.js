@@ -1,8 +1,13 @@
 import g1 from "./../../img/goods/g1.png";
 import Count from "./Count";
-const ProductInBasket = ({ product, deleteGood, increase, decrease }) => {
+const ProductInBasket = ({
+  product,
+  deleteGood,
+  increase,
+  decrease,
+  changeValue,
+}) => {
   //   console.log(product.id);
-  console.log(product.count);
   return (
     <>
       <li className="basket-contain-list-item">
@@ -24,6 +29,7 @@ const ProductInBasket = ({ product, deleteGood, increase, decrease }) => {
                   increase={increase}
                   decrease={decrease}
                   id={product.id}
+                  changeValue={changeValue}
                 />
               </div>
               <button

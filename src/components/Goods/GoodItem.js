@@ -3,25 +3,48 @@ import { useState } from "react";
 import ButtonAddToBusket from "../Buttons/ButtonAddToBasket";
 import ButtonCounterInBasket from "../Buttons/ButtonCounterInBasket";
 import { productInBasketList } from "../ProductInBasket/productInBasketList";
-const GoodItem = ({ id, img, name, priceTotal, count, price }) => {
+
+const GoodItem = ({ id, img, name, price, count }) => {
   const [goodButton, setGoodButton] = useState(true);
-  // const changeGoodBtn = () => {
-  //   setGoodButton(false);
-  // };
+  const [itemCount, setItemCount] = useState(count);
 
   const handleAddToBasket = () => {
-    const product = {
-      id,
-      img,
-      name,
-      price,
-      priceTotal,
-      count,
-    };
-    productInBasketList.push(product);
+    const existingProduct = productInBasketList.find(
+      (product) => product.id === id
+    );
+
+    if (existingProduct) {
+      existingProduct.count += itemCount;
+      existingProduct.priceTotal =
+        existingProduct.count * existingProduct.price;
+    } else {
+      const product = {
+        id,
+        img,
+        name,
+        price,
+        priceTotal: itemCount * price,
+        count: itemCount,
+      };
+      productInBasketList.push(product);
+    }
+
     setGoodButton(false);
   };
-  console.log(productInBasketList);
+
+  const increase = () => {
+    setItemCount((prevCount) => prevCount + 1);
+  };
+
+  const decrease = () => {
+    setItemCount((prevCount) => (prevCount > 1 ? prevCount - 1 : 1));
+  };
+
+  const changeValue = (value) => {
+    setItemCount(value >= 1 ? value : 1);
+  };
+
+  console.log(itemCount);
 
   return (
     <>
@@ -36,7 +59,12 @@ const GoodItem = ({ id, img, name, priceTotal, count, price }) => {
         {goodButton ? (
           <ButtonAddToBusket onClick={handleAddToBasket} />
         ) : (
-          <ButtonCounterInBasket />
+          <ButtonCounterInBasket
+            count={itemCount}
+            increase={increase}
+            decrease={decrease}
+            changeValue={(e) => changeValue(Number(e.target.value))}
+          />
         )}
       </li>
     </>

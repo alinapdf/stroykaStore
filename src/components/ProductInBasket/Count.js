@@ -1,7 +1,6 @@
 import plus from "./../../img/goods-page/plus-black.svg";
 import minus from "./../../img/goods-page/minus-black.svg";
-const Count = ({ count, increase, decrease, id }) => {
-  console.log(count);
+const Count = ({ count, increase, decrease, id, changeValue }) => {
   return (
     <>
       <button
@@ -18,6 +17,9 @@ const Count = ({ count, increase, decrease, id }) => {
         min="1"
         max="99"
         value={count}
+        onChange={(e) => {
+          changeValue(id, +e.target.value);
+        }}
       />
       <button
         className="basket-contain-list-item-wrapper-info-counter-minus"

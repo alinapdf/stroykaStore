@@ -1,8 +1,9 @@
 import GoodItem from "./GoodItem";
 import "./Goods.scss";
 import { goodsList } from "./goodsList";
+
 const Goods = () => {
-  console.log(goodsList);
+  // console.log(goodsList);
   return (
     <>
       <section className="goods">
@@ -20,7 +21,7 @@ const Goods = () => {
                   key={good.id}
                   index={index}
                   price={good.price}
-                  count={good.count}
+                  count={parseInt(good.count)}
                 />
               );
             })}

@@ -5,12 +5,29 @@ import { Link } from "react-router-dom";
 import { productInBasketList } from "../ProductInBasket/productInBasketList";
 import { useState } from "react";
 import ProductInBasket from "../ProductInBasket/ProductInBasket";
+import BasketResult from "./BasketResult";
+import { useEffect } from "react";
+
 const Basket = () => {
-  console.log(productInBasketList);
-  const [basket, setBasket] = useState(productInBasketList);
+  const [basket, setBasket] = useState(productInBasketList); //список товаров в корзинне
+  const [total, setTotal] = useState({ price: 0, count: 0 });
+
+  const calculateTotal = (basket) => {
+    const totalPrice = basket.reduce((prevS, current) => {
+      return prevS + current.priceTotal;
+    }, 0);
+    const totalCount = basket.reduce((prevS, current) => {
+      return prevS + current.count;
+    }, 0);
+    setTotal({ price: totalPrice, count: totalCount });
+  };
+
+  useEffect(() => {
+    calculateTotal(basket);
+  }, [basket]);
 
   const deleteGood = (id) => {
-    console.log("delete", id);
+    // console.log("delete", id);
     const index = productInBasketList.findIndex((product) => product.id === id);
     if (index !== -1) {
       productInBasketList.splice(index, 1);
@@ -66,10 +83,25 @@ const Basket = () => {
     });
   };
 
+  const changeValue = (id, value) => {
+    setBasket((basket) => {
+      return basket.map((good) => {
+        if (good.id === id) {
+          return {
+            ...good,
+            count: value,
+            priceTotal: value * good.price,
+          };
+        }
+        return good;
+      });
+    });
+  };
+
   console.log(productInBasketList);
 
   const goods = basket.map((good) => {
-    console.log("good", good);
+    console.log("goodINBASKET", good); //////////////////////////////
     return (
       <ProductInBasket
         key={good.id}
@@ -77,9 +109,12 @@ const Basket = () => {
         deleteGood={deleteGood}
         increase={increase}
         decrease={decrease}
+        changeValue={changeValue}
       />
     );
   });
+
+  console.log("goods", goods);
 
   return (
     <>
@@ -93,44 +128,7 @@ const Basket = () => {
         </div>
         <div className="container">
           <div className="basket-wrapper">
-            <div className="basket-wrapper-result">
-              <div className="basket-wrapper-result-header">Итого</div>
-              <div className="basket-wrapper-result-info-wrapper">
-                <div className="basket-wrapper-result-info-wrapper-name">
-                  Количество товара
-                </div>
-                <div className="basket-wrapper-result-info-wrapper-amount">
-                  3 шт.
-                </div>
-              </div>
-              <div className="basket-wrapper-result-info-wrapper">
-                <div className="basket-wrapper-result-info-wrapper-name">
-                  Товаров на сумму
-                </div>
-                <div className="basket-wrapper-result-info-wrapper-amount">
-                  3 160 ₽
-                </div>
-              </div>
-              <div className="basket-wrapper-result-btn-wrapper">
-                <button className="basket-wrapper-result-btn">
-                  Оформить заказ
-                </button>
-              </div>
-              <div className="basket-wrapper-result-info">
-                <p className="basket-wrapper-result-info-text one-deliver">
-                  Можно сделать заказ только от одного поставщика
-                </p>
-                <p className="basket-wrapper-result-info-text delivery">
-                  Доставка осуществляется курьерами поставщика или службой
-                  курьеров Достависта. Также товар можно забрать самостоятельно
-                  от поставщика
-                </p>
-                <p className="basket-wrapper-result-info-text box">
-                  Точная сумма доставки будет определена после после
-                  подтверждения заказа
-                </p>
-              </div>
-            </div>
+            <BasketResult total={total} />
             <div className="basket-contain">
               {productInBasketList.length === 0 ? (
                 <div className="no-goods-in-busket">В корзине пусто!</div>
